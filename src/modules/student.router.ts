@@ -1,13 +1,12 @@
-import express from "express" ;
-import { createControlar } from "./student.controlar";
+import express from 'express';
+import { createControlar } from './student.controlar';
 
+const studentRouter = express.Router();
 
-const studentRouter = express.Router()
+// studentRouter.post("/create-student" , createControlar.createStudents)
 
-studentRouter.post("/create-student" , createControlar.createStudents)
+studentRouter.get('/student', createControlar.getAllStudentsCnt);
 
-studentRouter.get("/student" , createControlar.getAllStudentsCnt )
+studentRouter.get('/:id', createControlar.getStudentByIdCnt);
 
-studentRouter.get("/:id" , createControlar.getStudentByIdCnt )
-
-export const router  = studentRouter
+export const router = studentRouter;
