@@ -6,9 +6,3 @@ export type Tusers = {
   status: 'in-progras' | 'blocked';
   isDeleted: boolean;
 };
-
-export type NewUser = {
-  password: string;
-  role: string;
-  id: string;
-};
