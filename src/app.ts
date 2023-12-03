@@ -1,6 +1,6 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
-import { StudentRouter } from './modules/student.router';
+// import { StudentRouter } from './modules/student.router';
 import globalErrorHandelar from './app/middelware/middelware';
 import notFound from './app/middelware/not-found';
 import router from './app/routes';
@@ -13,9 +13,9 @@ app.use(cors());
 
 // application use
 app.use('/api/v1', router);
-app.use('/students', StudentRouter);
+// app.use('/students', StudentRouter);
 
-app.get('/students', (req: Request, res: Response) => {
+app.get('/', (req: Request, res: Response) => {
   res.send('hello mongoose');
 });
 
